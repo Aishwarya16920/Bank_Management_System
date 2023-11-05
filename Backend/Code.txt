@@ -1,0 +1,11 @@
+User
+create table user(Name char(20),AccountNumber int(40),BankBalance varchar(40),AccountType char(20));
+insert into user values("Riya",123,"Rs.40000","Current"),("Isha",435,"Rs.12000","Saving"),("Sam",786,"Rs.99000","Current"),("Rishi",527,"Rs.50000","Current"),("Madav",972,"Rs.84000","Saving");
+
+Manager
+create table manager(ManagerName char(30),ManagerID int(40));
+insert into manager values("Rohan",101),("Sonal",102),("Tom",103),("Varun",104),("Anu",105);
+
+Cashier
+create table cashier(CashierName char(30),CashierID int(5));
+insert into cashier values("Manoj",201),("Teena",202),("Thara",203),("Karen",204),("Chan",205);
