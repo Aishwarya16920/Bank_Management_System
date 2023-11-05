@@ -1,0 +1,15 @@
+     With the help of My SQL.Net connector driver and My SQL for visual studio plugin/add-on, a connection between the front end (visual studio) and back end (My SQL databases) can be made successfully.
+      To connect to the database, the following procedure are followed:
+         Select TOOLS → Connect to Database
+          Select a server name and the database name in the Add Connection dialog box. 
+          Click on the Test Connection button to check if the connection succeeded.
+          Add a Data Grid View on the form.
+          Click on the Choose Data Source combo box.
+          Click on the Add Project Data Source link.
+          This opens the Data Source Configuration Wizard.
+Select Database as the data source type
+Choose Data Set as the database model.
+Choose the connection already set up.
+Save the connection string.
+Choose the database object, user table in our example, and click the Finish button.
+    

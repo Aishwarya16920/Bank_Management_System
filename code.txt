@@ -1,0 +1,30 @@
+ Dim literal As String = Label6.Text
+        Dim substring As String = literal.Substring(3)
+        Dim number1, number2 As Integer
+        If TextBox1.Text IsNot "" And TextBox2.Text IsNot "" Then
+            number1 = Convert.ToInt32(substring)
+            number2 = Convert.ToInt32(TextBox2.Text)
+            If (number2 = 0) Then
+                MsgBox("Enter a valid Amount", MsgBoxStyle.Critical)
+            ElseIf (number2 <= number1) Then
+                Label7.Text = "Rs. " + Convert.ToString(number1 - number2)
+                Dim Str As String = "UPDATE user SET BankBalance='" + Label7.Text + "' WHERE name='" + Label6.Text + "'"
+                conn.Open()
+                Dim mysc As New MySqlCommand(Str, conn)
+                mysc.ExecuteNonQuery()
+                MsgBox("Withdraw Successful", MsgBoxStyle.Information)
+                conn.Close()
+            Else
+                MsgBox("Withdraw Amount Exceeded", MsgBoxStyle.Critical)
+            End If
+        Else
+            MsgBox("Please enter the details", MsgBoxStyle.Critical)
+        End If
+
+
+
+ If (If "EXISTS(SELECT * FROM user WHERE AccountNumber='" + TextBox1.Text + "')") Then
+            UserMP.Show()
+        End If
+
+
